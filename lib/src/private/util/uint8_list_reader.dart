@@ -5,7 +5,7 @@ import 'ascii_runes.dart';
 
 /// Combines several Uin8Lists to read from them sequentially
 class Uint8ListReader {
-  static const Utf8Decoder _utf8decoder = Utf8Decoder(_allowMalformed: true);
+  static const Utf8Decoder _utf8decoder = Utf8Decoder(allowMalformed: true);
   final OptimizedBytesBuilder _builder = OptimizedBytesBuilder();
 
   /// Adds the given [list] data to this builder
