@@ -39,13 +39,13 @@ abstract class MailCodec {
   static final _emptyHeaderEncodingExpression = RegExp(r'\=\?.+?\?.+?\?\?\=');
 
   /// UTF8 encoding
-  static const encodingUtf8 = convert.Utf8Codec(allowMalformed: true);
+  static const encodingUtf8 = convert.Utf8Codec(_allowMalformed: true);
 
   /// ISO-8859-1 encoding
-  static const encodingLatin1 = convert.Latin1Codec(allowInvalid: true);
+  static const encodingLatin1 = convert.Latin1Codec(_allowInvalid: true);
 
   /// ASCII encoding
-  static const encodingAscii = convert.AsciiCodec(allowInvalid: true);
+  static const encodingAscii = convert.AsciiCodec(_allowInvalid: true);
   static final _charsetCodecsByName = <String, convert.Encoding Function()>{
     'utf-8': () => encodingUtf8,
     'utf8': () => encodingUtf8,

@@ -30,7 +30,7 @@ class _SmtpSendBdatCommand extends SmtpCommand {
   int _recipientIndex = 0;
   late List<Uint8List> _chunks;
   int _chunkIndex = 0;
-  static const Utf8Codec _codec = Utf8Codec(allowMalformed: true);
+  static const Utf8Codec _codec = Utf8Codec(_allowMalformed: true);
 
   static List<Uint8List> chunkData(List<int> binaryData) {
     const chunkSize = 512 * 1024;

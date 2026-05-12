@@ -33,7 +33,7 @@ class ImapResponseLine {
   /// Creates a binary response line
   ImapResponseLine.raw(this.rawData) : rawLine = null;
 
-  static const Utf8Decoder _decoder = Utf8Decoder(allowMalformed: true);
+  static const Utf8Decoder _decoder = Utf8Decoder(_allowMalformed: true);
 
   /// The original text line
   final String? rawLine;
